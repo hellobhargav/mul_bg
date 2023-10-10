@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: auto;
+}
+.bg{
+    width: 100%;
+    height: 100vh;
+    background: url("assets/images/1.jpg") center;
+    background-size: cover; 
+    animation-name: mulbg;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.bg-dark{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.464);
+}
+h1{
+    
+    font-family: aven;
+    text-shadow: 2px 3px 10px white;
+    font-size: 100px;
+    animation-direction: alternate;
+}
+section div{
+    width: 150px;
+    height: 150px;
+    background: url("assets/images/spider.jpg") center no-repeat;
+    background-size: cover;
+    box-shadow: 5px 3px 10px 5px black;
+    transition-duration: 0.5s;
+    transition-property: all;
+    transition-delay: 0s;
+    transform: skew(40deg,30deg);
+}
+section div:last-child{
+    transform: skew(-40deg,-30deg);
+}
+section div:hover{
+    
+    background: url("assets/images/spiderman.jpg") center no-repeat;
+    background-size: cover;
+    transform: skew(0deg);
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@font-face {
+    font-family: aven;
+    src: url("assets/fonts/Avengers.ttf");
+}
+
+@keyframes blink {
+   0%{
+    margin-left: 0%;
+    margin-top: 0%;
+   }
+   50%{
+    margin-left: 50%;
+    margin-top: 0%;
+   }
+   100%{
+    margin-left: 50%;
+    margin-top: 50%;
+   }
+}
+@keyframes mulbg {
+    0%{
+        background: url("assets/images/1.jpg");
+        background-size: cover; 
+    }
+    20%{
+        background: url("assets/images/2.jpg");
+        background-size: cover; 
+    }
+    40%{
+        background: url("assets/images/3.jpg");
+        background-size: cover; 
+    }
+    60%{
+        background: url("assets/images/4.jpg");
+        background-size: cover; 
+    }
+    100%{
+        background: url("assets/images/5.jpg");
+        background-size: cover; 
+    }
+}
